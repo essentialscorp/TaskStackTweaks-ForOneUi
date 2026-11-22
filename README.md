@@ -1,14 +1,30 @@
-# TaskStackTweak · 0.5.1-beta3
+# TaskStackTweak · 0.7.1-beta9
 
 [Bahasa Indonesia](#bahasa-indonesia) · [English](#english) · [Español](#español)
 
 ## Bahasa Indonesia
 
+**Sebelum menerapkan gaya**
+
+Jika Task Changer aktif, buka Good Lock → Home Up → Task Changer dan matikan sakelarnya. Kedua modul mengatur tampilan Aplikasi terkini.
+
+Setelah mematikannya, mulai ulang perangkat atau lakukan soft restart sistem. Lalu buka kembali TaskStackTweak dan pilih gaya.
+
+Jika Home Up tidak terpasang atau Task Changer sudah nonaktif sejak restart terakhir, langsung lanjutkan.
+
+**0.7.0 beta 8** · Pilih dari deretan gaya dan geser kartu pratinjau. Delapan gaya baru meliputi ColorOS Datar, ColorOS Bertumpuk, Kipas, Busur, Zoom, Pita film, Rak, dan Kaskade. **Terapkan dan mulai ulang One UI Home** menyimpan gaya lalu meminta restart launcher. Jalur deteksi kedua mengenali kartu Recents berdasarkan struktur launcher dan melayani baris horizontal di layar tegak maupun mendatar. Target uji mencakup ponsel, tablet, dan Fold dengan One UI Home dan LSPosed API 102. Kompatibilitas setiap firmware masih memerlukan uji perangkat.
+
+Beta 7 memperbaiki deklarasi layanan LSPosed yang hilang pada APK beta 6. Pasang langsung di atas beta 6 dan buka kembali modul.
+
+**Baru di beta 6.** Untuk empat preset ukuran, pilih **Kustom**, gulir kembali ke pratinjau, lalu tekan **Pilih preset**. **Fokus** memperkecil kedua tetangga kartu tengah (berikut/sebelumnya 0,80/0,80). **Karusel lebar** memperbesar keduanya (1,04/1,04). **Tumpukan maju** memakai 0,84/1,10 dan **Tumpukan balik** membalik pasangan itu. Putar ulang geseran, lalu tekan Coba dan mulai ulang One UI Home. Pengaturan ini memakai sumber skala Tilt Stack yang kompatibel. Gaya Berlapis dan Klasik memiliki kurva skala baru yang mendatar di tengah. Buka Recents, geser mendatar untuk membandingkan tetangga, ketuk kartu untuk membuka, atau geser kartu ke atas untuk menutup. APK uji beta 6 memakai sertifikat berbeda dari APK uji beta 5. Catat nilai Kustom sebelum memasang ulang modul.
+
 TaskStackTweak mengubah tampilan kartu **Aplikasi terkini** di Samsung One UI Home. Gaya **Berlapis** merapatkan kartu di belakang kartu utama saat digeser. **Klasik** memberi jarak lebih lebar. Keduanya terinspirasi dari iOS. Geser untuk menutup dan ketuk untuk membuka aplikasi tetap ditangani oleh launcher Samsung.
+
+Beta 5 mempertahankan urutan gambar dari One UI dan membatasi tambahan pergeseran kartu. Modul mengenali penampung dan kartu dari APK One UI Home 18.0.07.53. Log `Samsung overview attached` menunjukkan penampung terhubung. Setelah membuka beberapa kartu, periksa `Deck active`. Pengujian langsung di perangkat masih diperlukan.
 
 ### Perangkat dan persyaratan
 
-| Perangkat atau konfigurasi | Dukungan beta 3 |
+| Perangkat atau konfigurasi | Dukungan beta 6 |
 |---|---|
 | Samsung Galaxy A36 5G | Perangkat sasaran pengujian. Keberhasilan seluruh alur pada HP fisik belum dikonfirmasi. |
 | Samsung Galaxy lain dengan One UI Home | Kandidat pengujian. Kompatibilitas bergantung pada versi launcher dan tata letak kartu. Belum ada daftar model atau versi One UI yang terverifikasi. |
@@ -22,7 +38,7 @@ TaskStackTweak mengubah tampilan kartu **Aplikasi terkini** di Samsung One UI Ho
 2. Di pengelola LSPosed, aktifkan **TaskStackTweak**. Di bagian scope, pilih **One UI Home** (`com.sec.android.app.launcher`). Buka aplikasi TaskStackTweak. Untuk memakai tombol restart, izinkan **TaskStackTweak** (`dev.relz.taskstacktweak`) di **KernelSU → Superuser**.
 3. Buka tiga aplikasi agar ada beberapa kartu untuk dibandingkan. Pegang HP tegak, gunakan tata letak Recent Apps horizontal, lalu pilih **Terinspirasi iOS · Berlapis** di TaskStackTweak.
 4. Ketuk **Coba selama 2 menit**, lalu **Mulai ulang One UI Home**. Waktu percobaan dihitung sejak tombol **Coba** ditekan. Setelah layar utama terbuka, masuk ke Aplikasi terkini dan geser perlahan. Perhatikan jarak, ukuran, dan tumpang tindih kartu. Membuka pratinjau saja belum mengaktifkan gaya.
-5. Jika hasilnya cocok, kembali ke modul, ketuk **Terapkan gaya**, lalu **Mulai ulang One UI Home**. Untuk mengganti bahasa aplikasi, gunakan **Bahasa** di bagian bawah.
+5. Jika hasilnya cocok, kembali ke modul, ketuk **Terapkan dan mulai ulang One UI Home**. Untuk mengganti bahasa aplikasi, gunakan **Bahasa** di bagian bawah.
 
 ### Pemecahan masalah
 
@@ -42,11 +58,27 @@ Untuk melaporkan bug, sertakan model HP, versi Android dan One UI, **versi aplik
 
 ## English
 
+**Before applying a style**
+
+If Task Changer is on, open Good Lock → Home Up → Task Changer and turn it off. Both modules control Recent apps.
+
+After turning it off, restart your device or perform a system soft restart. Then reopen TaskStackTweak and choose a style.
+
+If Home Up is not installed or Task Changer has been off since your last restart, continue now.
+
+**0.7.0 beta 8** · Swipe the style strip and drag the preview. Eight new styles are ColorOS Flat, ColorOS Stacked, Fan, Arc, Zoom, Filmstrip, Shelf and Cascade. Apply and restart One UI Home saves the profile before restarting the launcher. A fallback recognizes Recents cards by their launcher hierarchy. Horizontal rows are eligible in portrait or landscape. Galaxy phones, tablets and foldables with One UI Home and LSPosed API 102 are targets for testing. Physical compatibility remains unverified.
+
+Beta 7 restores the LSPosed provider missing from the beta 6 APK. Install over beta 6 and reopen the module.
+
+**New in beta 6.** Select **Custom**, scroll back to the preview and tap **Choose a preset**. **Focus** reduces both neighboring cards (next/previous 0.80/0.80). **Wide carousel** enlarges both (1.04/1.04). **Forward stack** uses 0.84/1.10 and **Reverse stack** swaps those values. Replay the swipe, select Try and restart One UI Home. These presets require compatible Tilt Stack scale resources. Layered and Classic now use a scale curve that flattens at the center. Open Recents, swipe sideways to compare cards, tap to open or swipe a card up to dismiss. The beta 6 test APK uses a different certificate from beta 5. Note your custom values before reinstalling the module.
+
 TaskStackTweak changes how **Recent apps** cards appear in Samsung One UI Home. As you swipe, **Layered** brings the cards behind the main card closer together. **Classic** spaces them farther apart. Both styles are inspired by iOS. The Samsung launcher handles tapping a card to open an app and swiping it away.
+
+Beta 5 preserves One UI drawing order and bounds the extra card offset. It recognizes the container and card found in the One UI Home 18.0.07.53 APK. The log entry `Samsung overview attached` confirms the container is attached. Open several cards and check for `Deck active`. Device testing is still required.
 
 ### Devices and requirements
 
-| Device or configuration | Beta 3 support |
+| Device or configuration | Beta 6 support |
 |---|---|
 | Samsung Galaxy A36 5G | Intended test device. A successful end-to-end run on physical hardware has yet to be confirmed. |
 | Other Samsung Galaxy devices running One UI Home | Candidates for testing. Compatibility depends on the launcher version and card layout. A verified model or One UI version list is still pending. |
@@ -60,7 +92,7 @@ TaskStackTweak changes how **Recent apps** cards appear in Samsung One UI Home. 
 2. Enable **TaskStackTweak** in your LSPosed manager. Select **One UI Home** (`com.sec.android.app.launcher`) in the module scope. Open TaskStackTweak. To use its restart button, grant **TaskStackTweak** (`dev.relz.taskstacktweak`) access in **KernelSU → Superuser**.
 3. Open three apps so you can compare adjacent cards. Hold the phone in portrait, use a horizontal Recent apps layout, then select **iOS-inspired · Layered** in TaskStackTweak.
 4. Tap **Try for 2 minutes**, then **Restart One UI Home**. The timer starts when you tap **Try**. Once the home screen opens, enter Recent apps and swipe slowly. Look for changes in card spacing, size, and overlap. Playing the preview alone does not activate the style.
-5. To keep the style, return to the module, tap **Apply style**, then **Restart One UI Home**. To switch the app language, use **Language** at the bottom.
+5. To keep the style, return to the module, tap **Apply and restart One UI Home**. To switch the app language, use **Language** at the bottom.
 
 ### Troubleshooting
 
@@ -80,11 +112,27 @@ For a bug report, include the phone model, Android and One UI versions, **One UI
 
 ## Español
 
+**Antes de aplicar un estilo**
+
+Si Task Changer está activo, abre Good Lock → Home Up → Task Changer y desactívalo. Ambos módulos controlan las aplicaciones recientes.
+
+Después, reinicia el dispositivo o realiza un reinicio suave del sistema. Vuelve a abrir TaskStackTweak y elige un estilo.
+
+Si Home Up no está instalado o Task Changer ya estaba desactivado desde el último reinicio, puedes continuar.
+
+**0.7.0 beta 8** · Desliza la fila de estilos y la vista previa. Hay ocho estilos nuevos: ColorOS Plano, ColorOS Apilado, Abanico, Arco, Zoom, Tira de película, Estante y Cascada. Aplicar y reiniciar One UI Home guarda el estilo antes de reiniciar el lanzador. La detección alternativa reconoce la jerarquía de Recientes. Admite filas horizontales en ambas orientaciones. Los móviles, tabletas y plegables Galaxy con One UI Home y LSPosed API 102 son objetivos de prueba. Falta la comprobación física por firmware.
+
+La beta 7 recupera el proveedor de LSPosed que faltaba en el APK de la beta 6. Instala la actualización sobre la beta 6 y vuelve a abrir el módulo.
+
+**Nuevo en la beta 6.** Elige el perfil personalizado, vuelve a la vista previa y pulsa **Elegir un estilo**. **Enfoque** reduce ambas tarjetas vecinas (siguiente/anterior 0,80/0,80). **Carrusel ancho** amplía ambas (1,04/1,04). **Pila hacia delante** usa 0,84/1,10 y **Pila inversa** intercambia esos valores. Reproduce el gesto, activa la prueba y reinicia One UI Home. Estos estilos requieren los recursos de escala compatibles de Tilt Stack. Los dos estilos inspirados en iOS ahora usan una curva de escala que se aplana en el centro. Abre Recientes, desliza en horizontal para comparar, toca una tarjeta para abrirla o deslízala hacia arriba para cerrarla. El APK de prueba de la beta 6 usa otro certificado. Anota los valores personalizados antes de reinstalar el módulo.
+
 TaskStackTweak cambia la disposición de las tarjetas de **Aplicaciones recientes** en Samsung One UI Home. Al deslizar el dedo, el estilo **Capas** acerca entre sí las tarjetas que quedan detrás de la principal. **Clásico** deja más espacio entre ellas. Ambos estilos se inspiran en iOS. El lanzador de Samsung gestiona los gestos para abrir y cerrar aplicaciones.
+
+La beta 5 conserva el orden de dibujo de One UI y limita el desplazamiento adicional. Reconoce el contenedor y las tarjetas del APK de One UI Home 18.0.07.53. El mensaje `Samsung overview attached` indica que el contenedor está conectado. Abre varias tarjetas y comprueba si aparece `Deck active`. Aún se requieren pruebas en el dispositivo.
 
 ### Dispositivos y requisitos
 
-| Dispositivo o configuración | Compatibilidad de la beta 3 |
+| Dispositivo o configuración | Compatibilidad de la beta 6 |
 |---|---|
 | Samsung Galaxy A36 5G | Modelo previsto para las pruebas. Sigue pendiente la confirmación de una prueba completa en un dispositivo físico. |
 | Otros Samsung Galaxy con One UI Home | Candidatos para pruebas. La compatibilidad depende de la versión del lanzador y del diseño de las tarjetas. Aún no hay una lista de modelos o versiones de One UI verificados. |
@@ -127,3 +175,8 @@ Al informar de un error, incluye el modelo del teléfono, las versiones de Andro
 | APK publik / Public APK / APK público | Tandatangani APK rilis dengan keystore penerbit dan simpan kuncinya untuk pembaruan. | Sign the release APK with the publisher’s keystore and keep the key for updates. | Firma el APK de publicación con el almacén de claves del editor y conserva la clave para futuras actualizaciones. |
 
 [libxposed API](https://libxposed.github.io/api/) · [KernelSU](https://kernelsu.org/)
+
+## Forum references / Referensi forum / Referencias
+
+- [Samsung Members Indonesia · Task Changer](https://r1.community.samsung.com/t5/others/fitur-menarik-di-modul-home-up/td-p/37215162)
+- [Android Central · Recent apps list and carousel](https://forums.androidcentral.com/threads/show-recent-apps-in-list-android12-beta.1034721/)
